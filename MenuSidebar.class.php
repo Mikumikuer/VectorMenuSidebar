@@ -17,7 +17,8 @@ class MenuSidebar {
 		echo '<script id="ToolboxInit">childlist = document.querySelectorAll("#MenuSidebar > ul#MSToolbox > li");for(var i=0;i<childlist.length;i++){if(childlist[i].innerHTML === ""){$(childlist[i]).remove()}};$("#ToolboxInit").remove();</script>';//dealwith toolbox parser bug
 		return true;
 	}
-	protected function renderMenuSidebarSpecialItem( $name, $content, $text) {
+
+	function renderMenuSidebarSpecialItem( $name, $content, $text) {
 		if ( !isset( $text ) ) {
 			$innertext = wfMessage( $name )->text();
 		} else {
@@ -25,4 +26,9 @@ class MenuSidebar {
 		}
 		return '<li><a href="'.$content['href'].'" id="'.$content['id'].'">'.$innertext.'</a><li>';
 	}
+
+	public static function BeforePageDisplay($out, $skin) {
+        $out->addModules( 'ext.menusidebar' );
+        return true;
+    }
 }

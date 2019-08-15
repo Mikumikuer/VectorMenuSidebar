@@ -13,14 +13,6 @@
 			"i18n"
 		]
 	},
-	"Hooks": {
-		"onSkinBuildSidebar": [
-			"MenuSidebar::onSkinBuildSidebar"
-		],
-	},
-	"AutoloadClasses": {
-		"MenuSidebar": "MenuSidebar.class.php"
-	},
 	"ResourceModules": {
 		"ext.menusidebar": {
 			"styles": [
@@ -30,11 +22,22 @@
 				"desktop",
 				"mobile"
 			],
+			"dependenices":[],
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "MenuSidebar/modules"
 	},
-	"manifest_version": 1
+	"Hooks": {
+		"onSkinBuildSidebar": [
+			"MenuSidebar::onSkinBuildSidebar"
+		],
+		"BeforePageDisplay": [
+			"Lazyload::BeforePageDisplay"
+		]
+	},
+	"AutoloadClasses": {
+		"MenuSidebar": "MenuSidebar.class.php"
+	},
 }
