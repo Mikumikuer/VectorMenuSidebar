@@ -1,0 +1,36 @@
+{
+	"name": "MenuSidebar",
+	"version": "0.0.1",
+	"author": [
+		"Mikumikuer"
+	],
+	"url": "",
+	"descriptionmsg": "menusidebar-desc",
+	"type": "other",
+	"license-name": "MIT",
+	"MessagesDirs": {
+		"MenuSidebar": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"onSkinBuildSidebar": [
+			"MenuSidebar::onSkinBuildSidebar"
+		],
+	},
+	"AutoloadClasses": {
+		"MenuSidebar": "MenuSidebar.class.php"
+	},
+	"ResourceModules": {
+		"ext.menusidebar": {
+			"styles": [
+				"modules/styles.css"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			],
+		}
+	},
+	"manifest_version": 1
+}
