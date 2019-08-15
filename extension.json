@@ -32,5 +32,9 @@
 			],
 		}
 	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "MenuSidebar/modules"
+	},
 	"manifest_version": 1
 }
