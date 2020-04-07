@@ -1,43 +1,24 @@
 {
-	"name": "MenuSidebar",
+	"name": "VectorMenuSidebar",
 	"version": "0.0.1",
 	"author": [
 		"Mikumikuer"
 	],
 	"url": "",
-	"descriptionmsg": "menusidebar-desc",
+	"descriptionmsg": "VectorMenuSidebar-desc",
 	"type": "other",
 	"license-name": "MIT",
 	"MessagesDirs": {
-		"MenuSidebar": [
+		"VectorMenuSidebar": [
 			"i18n"
 		]
 	},
-	"ResourceModules": {
-		"ext.menusidebar": {
-			"styles": [
-				"modules/styles.css"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
-			],
-			"dependenices":[],
-		}
-	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "modules",
-		"remoteExtPath": "MenuSidebar/modules"
-	},
 	"Hooks": {
-		"onSkinBuildSidebar": [
-			"MenuSidebar::onSkinBuildSidebar"
-		],
-		"BeforePageDisplay": [
-			"Lazyload::BeforePageDisplay"
-		]
+		"VectorAfterToolbox": "VectorMenuSidebar::onVectorBeforeFooter",
+		"BeforePageDisplay":"VectorMenuSidebar::BeforePageDisplay"
 	},
 	"AutoloadClasses": {
-		"MenuSidebar": "MenuSidebar.class.php"
+		"VectorMenuSidebar": "VectorMenuSidebar.class.php"
 	},
+	"manifest_version": 2
 }
