@@ -1,8 +1,14 @@
 <?php
 class VectorMenuSidebar {
     public static function BeforePageDisplay($out, $skin) {
-        $out->addHeadItems('<link rel="stylesheet" type="text/css" href="/extensions/VectorMenuSidebar/resources/baseStyle.css">');
-        return true;
+	global $wgEnableVMSCustomStyle;
+	if ($wgEnableVMSCustomStyle===true){
+		$style=wfMessage('MenuSidebar.css')->plain();
+		$out->addHeadItems('<style> type="text/css"'.$style.'</style>');
+	} else {
+		$out->addHeadItems('<link rel="stylesheet" type="text/css" href="/extensions/VectorMenuSidebar/resources/baseStyle.css">');
+	}
+	return true;
     } 
     public static function onVectorBeforeFooter() {
         global $wgVectorMenuSidebar,$wgShowAfterMenuSidebar;	
