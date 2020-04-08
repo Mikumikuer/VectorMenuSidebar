@@ -1,7 +1,7 @@
 <?php
 class VectorMenuSidebar {
     public static function BeforePageDisplay($out, $skin) {
-	global $wgEnableVMSCustomStyle;
+	global $wgEnableVMSCustomStyle;//defined in LocalSettings.php
 	if ($wgEnableVMSCustomStyle===true){
 		$style=wfMessage('MenuSidebar.css')->plain();
 		$out->addHeadItems('<style> type="text/css"'.$style.'</style>');
