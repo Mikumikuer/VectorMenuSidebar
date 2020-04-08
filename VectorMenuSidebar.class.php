@@ -1,7 +1,6 @@
 <?php
 class VectorMenuSidebar {
     public static function BeforePageDisplay($out, $skin) {
-<<<<<<< HEAD
 	global $wgEnableVMSCustomStyle;//defined in LocalSettings.php
 	if ($wgEnableVMSCustomStyle===true){
 		$style=wfMessage('MenuSidebar.css')->plain();
@@ -11,17 +10,6 @@ class VectorMenuSidebar {
 	}
 	return true;
     } 
-=======
-        global $wgEnableVMSCustomStyle;
-        if ($wgEnableVMSCustomStyle===true){
-                $style=wfMessage('MenuSidebar.css')->plain();
-                $out->addHeadItems('<style> type="text/css"'.$style.'</style>');
-        } else {
-                $out->addHeadItems('<link rel="stylesheet" type="text/css" href="/extensions/VectorMenuSidebar/resources/baseStyle.css">');
-        }
-        return true;
-    }
->>>>>>> 1c7ebe51dbca4afa96c1b27d11ce1b1cd353d68a
     public static function onVectorBeforeFooter() {
         global $wgVectorMenuSidebar,$wgShowAfterMenuSidebar;
         if ($wgVectorMenuSidebar===true) {
