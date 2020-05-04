@@ -31,3 +31,13 @@ example for `Mediawiki:MenuSidebar` by default style settings:
 	{{#Parser Function Item}}
 
 Example site with MenuSidebar: www.gfwiki.org
+
+## Custom styles
+add your own style in `Mediawiki:MenuSidebar.css`
+
+then apply `$wgEnableVMSCustomStyle = true;` in `LocalSettings.php` to activate，
+
+Notice ：applying custom styles will disable default styles.
+
+## Content after Sidebar
+add content based on wikitext in `Mediawiki:MenuSidebarAfter` and add `$wgShowAfterMenuSidebar = true;`in `LocalSettings.php` to activate，
