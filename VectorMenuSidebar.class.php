@@ -7,7 +7,7 @@ class VectorMenuSidebar {
         }
         if ($wgEnableVMSCustomStyle===true){
                 $style=wfMessage('MenuSidebar.css')->plain();
-                $out->addHeadItems('<style> type="text/css"'.$style.'</style>');
+                $out->addHeadItems('<style type="text/css">'.$style.'</style>');
         } else {
                 $out->addHeadItems('<link rel="stylesheet" type="text/css" href="/extensions/VectorMenuSidebar/resources/baseStyle.css">');
         }
