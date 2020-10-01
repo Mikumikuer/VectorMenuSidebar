@@ -28,8 +28,8 @@ class VectorMenuSidebar {
                         echo '<div>'.$MenuSidebarTail.'</div>';
                 }
                 echo '</div>';
-        return true;
         }
+        return true;
     }
     
     public static function onBeforePageDisplayMobile( OutputPage $out, Skin $sk ) {
