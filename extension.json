@@ -14,7 +14,6 @@
 		]
 	},
 	"Hooks": {
-		"VectorAfterToolbox": "VectorMenuSidebar::onVectorBeforeFooter",
 		"BeforePageDisplay":"VectorMenuSidebar::BeforePageDisplay",
 		"BeforePageDisplayMobile":"VectorMenuSidebar::onBeforePageDisplayMobile"
 	},
