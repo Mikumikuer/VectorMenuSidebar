@@ -16,9 +16,7 @@ class VectorMenuSidebar {
     
     public static function onBeforePageDisplayMobile( OutputPage $out, Skin $sk ) {
         $script = <<<'START_END_MARKER'
-<script>
-function menuadjust(){var a = $("body").height()+"px";document.getElementById("mw-mf-page-left").style.height = a;};
-$(function(){menuadjust();});
+<script>function menuadjust(){var a = $("body").height()+"px";document.getElementById("mw-mf-page-left").style.height = a;};$(function(){menuadjust();});
 $(window).resize(function(){menuadjust()});
 var navbar = function(data, textStatus, jqxhr) {
     var navlist = data.parse.text["*"];
@@ -36,7 +34,7 @@ var mfSidebar = function() {
 $(function(){mfSidebar();});
 </script>
 START_END_MARKER;
-        $out->addHeadItem('mooncellApp', $script);
+        $out->addHeadItem('mfsidebar', $script);
 		return true;
     }
     
