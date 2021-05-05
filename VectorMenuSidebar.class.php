@@ -24,28 +24,4 @@ class VectorMenuSidebar {
         }
         return true;
     }
-    
-    public static function onBeforePageDisplayMobile( OutputPage $out, Skin $sk ) {
-        $script = <<<'START_END_MARKER'
-<script>function menuadjust(){var a = $("body").height()+"px";document.getElementById("mw-mf-page-left").style.height = a;};$(function(){menuadjust();});
-$(window).resize(function(){menuadjust()});
-var navbar = function(data, textStatus, jqxhr) {
-    var navlist = data.parse.text["*"];
-	$(navlist).insertBefore(".menu > .hlist")
-  };
-var mfSidebar = function() {
-    var purl = "/api.php?action=parse&page=MediaWiki:MFSidebar&format=json";
-    $.ajax({
-      url: purl,
-      success: navbar,
-      error: function () {console.error("can\'t load customized navmenu")},
-      dataType: "json"
-    });
-  };
-$(function(){mfSidebar();});
-</script>
-START_END_MARKER;
-        $out->addHeadItem('mfsidebar', $script);
-		return true;
-    }
 }

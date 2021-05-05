@@ -15,7 +15,6 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay":"VectorMenuSidebar::BeforePageDisplay",
-		"BeforePageDisplayMobile":"VectorMenuSidebar::onBeforePageDisplayMobile"
 	},
 	"AutoloadClasses": {
 		"VectorMenuSidebar": "VectorMenuSidebar.class.php"
