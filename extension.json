@@ -14,7 +14,7 @@
 		]
 	},
 	"Hooks": {
-		"BeforePageDisplay":"VectorMenuSidebar::BeforePageDisplay",
+		"BeforePageDisplay":"VectorMenuSidebar::BeforePageDisplay"
 	},
 	"AutoloadClasses": {
 		"VectorMenuSidebar": "VectorMenuSidebar.class.php"
