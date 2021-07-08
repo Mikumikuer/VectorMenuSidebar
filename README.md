@@ -11,8 +11,6 @@ wfLoadExtension( 'VectorMenuSidebar' );
 
 Create your own wikitext based sidebar for Vector skin
 
-requirement:`Font-awesome`
-
 add `$wgVectorMenuSidebar = true;` in `LocalSettings.php` to activate MenuSidebar.
 
 Sidebar style is built in backend, edit ./resources/MenuSidebar.css to customize MenuSidebar.
